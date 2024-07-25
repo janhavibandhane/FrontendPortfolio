@@ -1,5 +1,5 @@
 import React from 'react';
-import v from "/Images/adechofull.mp4"
+// import v from "/Images/adechofull.mp4"
 
 function ProjectVideo() {
   return (
@@ -11,7 +11,7 @@ function ProjectVideo() {
         <div className=' md:text-lg text-black pb-5'>At Adecho Technologies, I worked on this full project</div>
         <div className=' md:text-lg text-black pb-5 pl-1 pr-1'>Technologies i use in this project React js ,Tailwind Css,Daisyui for frontend.</div> 
         <video width="900" controls>
-          <source src={v} type="video/mp4" />
+          {/* <source src={} type="video/mp4" /> */}
             Your browser does not support the video tag.
          </video>
       </div>
