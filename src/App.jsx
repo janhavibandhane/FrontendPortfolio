@@ -15,7 +15,7 @@ function App() {
      <Header />
      <Project />
    
-     <Project />
+   
     </>
   )
 }
