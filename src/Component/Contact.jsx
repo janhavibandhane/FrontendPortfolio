@@ -8,22 +8,22 @@ function Contact({Img,item1,item2,style}) {
   const[name,SetName]=useState('');
   const[text,setText]=useState('');
 
-  //  const handleSubmit=async(e)=>{
-  //   e.preventDefault();
-  //   try {
-  //     const response=await axios.post('http://localhost:3000/users',
-  //       {email,name,text}
-  //     );
-  //     alert("Submited")
-  //     // reset it
-  //     setEmail('');
-  //     SetName('');
-  //     setText('');
-  //   } catch (error) {
-  //     console.log(error)
-  //     alert("Response Not submted")
-  //   }
-  //  }
+   const handleSubmit=async(e)=>{
+    e.preventDefault();
+    try {
+      const response=await axios.post('https://localhost:3000/users',
+        {email,name,text}
+      );
+      alert("Submited")
+      // reset it
+      setEmail('');
+      SetName('');
+      setText('');
+    } catch (error) {
+      console.log(error)
+      alert("Response Not submted")
+    }
+   }
 
 
 
@@ -92,7 +92,7 @@ function Contact({Img,item1,item2,style}) {
           <div className=" flex mt-10 text-[#cccccc]">
               <div className=" mr-5 text-sm">   </div>
               <button className="btn  lg:w-[10rem] lg:h-[2rem] md:w-[7rem] md:h-[1.5rem] w-[7rem] bg-[#02021E] text-white hover:text-black  "
-              // onClick={handleSubmit}
+              onClick={handleSubmit}
               >Submit </button>
           </div>
         </div>

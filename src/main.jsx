@@ -13,11 +13,11 @@ import Layout from './Layout.jsx';
 import Contact from './Component/Contact.jsx';
 import ProjectVideo from './Component/ProjectVideo.jsx';
 
-const basename = process.env.PUBLIC_URL;
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
-      <Router basename={basename}>
+      <Router>
         <Routes>
           <Route path='' element={<Layout />} >
              <Route path='/' element={<App />} />
