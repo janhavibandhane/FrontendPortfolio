@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Img from '/Images/head.webp';
+import Img from '/Images/head.png';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 function Header() {
