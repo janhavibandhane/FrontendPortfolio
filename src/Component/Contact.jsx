@@ -1,13 +1,31 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useState } from "react";
 import form from "/Images/Form.gif"
+import axios from 'axios';
 
 function Contact({Img,item1,item2,style}) {
   const [email, setEmail] = useState('');
   const[name,SetName]=useState('');
-  const[About,setAbout]=useState('');
+  const[text,setText]=useState('');
 
-   
+   const handleSubmit=async(e)=>{
+    e.preventDefault();
+    try {
+      const response=await axios.post('http://localhost:3000/users',
+        {email,name,text}
+      );
+      alert("Submited")
+      // reset it
+      setEmail('');
+      SetName('');
+      setText('');
+    } catch (error) {
+      console.log(error)
+      alert("Response Not submted")
+    }
+   }
+
+
 
   const clipPathStyle = {
     clipPath: "polygon(0 0, 15% 0, 0 15%, 0 100%, 100% 100%, 100% 0)",
@@ -30,7 +48,7 @@ function Contact({Img,item1,item2,style}) {
         style={{ ...clipPathStyle }}
       >
         {/* GIF */}
-        <div className=" ">
+        <div >
           <img src={form} ></img>
         </div>
        
@@ -66,14 +84,16 @@ function Contact({Img,item1,item2,style}) {
             <input type="text" 
             placeholder="Enter text" 
             style={inputStyle} 
-            value={About}
-            onChange={(e)=>setAbout(e.target.value)}
+            value={text}
+            onChange={(e)=>setText(e.target.value)}
             />
           </div>
 
           <div className=" flex mt-10 text-[#cccccc]">
               <div className=" mr-5 text-sm">   </div>
-              <button className="btn  lg:w-[10rem] lg:h-[2rem] md:w-[7rem] md:h-[1.5rem] w-[7rem] bg-[#02021E] text-white hover:text-black  ">Submit </button>
+              <button className="btn  lg:w-[10rem] lg:h-[2rem] md:w-[7rem] md:h-[1.5rem] w-[7rem] bg-[#02021E] text-white hover:text-black  "
+              onClick={handleSubmit}
+              >Submit </button>
           </div>
         </div>
 

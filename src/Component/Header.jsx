@@ -3,7 +3,7 @@ import Img from '/Images/head.webp';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 function Header() {
-  const fullText = "Hiii! I'm Janhavi Bandhane. I'm a Web Developer With 7 Months Of Experience";
+  const fullText = "Hiii! I'm Janhavi Bandhane and I'm a Web Developer .";
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
@@ -37,12 +37,14 @@ function Header() {
         `}
       </style>
       <div className="w-full z-10 ">
-        <img src={Img} className="w-full md:h-[55rem] h-[30rem]" alt="Background" />
+        <img src={Img} className="w-full md:h-[55rem] h-[28rem]" alt="Background" />
         <div className="absolute inset-0 flex flex-col justify-center items-center space-y-4">
           <div className="text-center lg:text-5xl md:text-4xl text-2xl text-white font-bold space-y-3 md:mt-12 mt-[-10rem]">
             <span className=' lg:pl-20 lg:pr-20'>{displayedText}</span>
           </div>
-          <div className="text-white md:text-2xl text-xl font-semibold text-center mt-6 bounce">
+          <div className="text-white md:text-2xl text-xl font-semibold text-center mt-6 bounce"
+          
+          >
             Explore More 
             <MdOutlineKeyboardArrowDown className="ml-12 text-3xl" />
           </div>

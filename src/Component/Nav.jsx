@@ -4,6 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGripLines } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -28,11 +29,39 @@ function Nav() {
     <>
       <div className={`navbar ${showNavbar ? 'bg-[#02021E]' : 'bg-transparent'} fixed w-full z-20`}>
 
-        <div className={`flex-1 lg:space-x-4 md:block hidden text-white`}>
-          <Link to={"/"}><a className="btn btn-ghost lg:text-xl text-lg">Home</a></Link>
-          <Link to={"/about"}><a className="btn btn-ghost lg:text-xl text-lg">About</a></Link>
-          <Link to={"/contact"}><a className="btn btn-ghost lg:text-xl text-lg">Contact</a></Link>
-          <Link to={"/video"}><a className="btn btn-ghost lg:text-xl text-lg">Project</a></Link>
+      <div className={`flex-1 lg:space-x-4 md:block hidden text-white`}>
+       <NavLink 
+         to="/" 
+         className={({ isActive }) => 
+           `btn btn-ghost lg:text-xl text-lg ${isActive ? 'text-emerald-500' : 'hover:text-emerald-500'}`
+          }
+       >
+       Home
+       </NavLink>
+       <NavLink 
+        to="/about" 
+          className={({ isActive }) => 
+         `btn btn-ghost lg:text-xl text-lg ${isActive ? 'text-emerald-500' : 'hover:text-emerald-500'}`
+       }
+      >
+       About
+      </NavLink>
+      <NavLink 
+        to="/contact" 
+          className={({ isActive }) => 
+         `btn btn-ghost lg:text-xl text-lg ${isActive ? 'text-emerald-500' : 'hover:text-emerald-500'}`
+       }
+      >
+       Contact
+      </NavLink>
+      <NavLink 
+        to="/video" 
+          className={({ isActive }) => 
+         `btn btn-ghost lg:text-xl text-lg ${isActive ? 'text-emerald-500' : 'hover:text-emerald-500'}`
+       }
+      >
+        Project
+      </NavLink>
         </div>
 
         <div className={`flex-1 ml-6 space-x-4 text-white lg:text-2xl text-xl font-semibold`}>
@@ -56,7 +85,7 @@ function Nav() {
                <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu bg-[#02021E] text-base-content  min-h-full w-80 p-4 pt-20">
                 {/* Sidebar content here */}
-                 <li className=' text-xl text-white'><Link to={""}>Home</Link></li>
+                 <li className=' text-xl text-white '><Link to={""}>Home</Link></li>
                  <li className=' text-xl text-white'><Link to={"/about"}>About Us</Link></li>
                  <li className=' text-xl text-white'><Link to={"/contact"}>Contact Us</Link></li>
                  <li className=' text-xl text-white'><Link to={"/video"}>Project</Link></li>
