@@ -10,7 +10,7 @@ function AboutUs(){
                
             <div className="lg:pl-40 lg:pr-40 md:pl-20 md:pr-20 pl-5 pr-5">
                <div className=" text-xl md:text-3xl font-serfic pb-3  text-teal-300">About me</div>
-               <div className=" text-lg md:text-xl">Hi, my name is Janhavi Abdanahne. I am a third-year Bachelor of Science in Information Technology (BSc IT) student, with a strong focus on learning and mastering MERN (MongoDB, Express.js, React, and Node.js) development.</div>    
+               <div className=" text-lg md:text-xl">Hi, my name is Janhavi bandhane. I am in a third-year Bachelor of Science in Information Technology (BSc IT) student, with a strong focus on learning and mastering MERN (MongoDB, Express.js, React, and Node.js) development.</div>    
             </div>
             <div className=" lg:pl-40 lg:pr-40 md:pl-20 md:pr-20 pl-5 pr-5">
                <div className=" text-xl md:text-3xl font-serfic pb-3 text-teal-300">Skills</div>
